@@ -6,7 +6,7 @@ const PageNotFound = () => {
   return (
     <div style={{ width: '100%', height: '100%' }}>
       <Helmet>
-        <title>404 | Lapteller</title>
+        <title>404 | JobAsk</title>
       </Helmet>
       <NotFoundImg />
     </div>

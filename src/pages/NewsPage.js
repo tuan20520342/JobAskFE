@@ -28,7 +28,7 @@ const NewsPage = () => {
       }}
     >
       <Helmet>
-        <title>News | Lapteller</title>
+        <title>News | JobAsk</title>
       </Helmet>
       {error ? (
         <NotFoundImg isWrong={true} />

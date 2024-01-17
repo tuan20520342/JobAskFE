@@ -10,6 +10,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import navConfig from '../NavConfig';
 import { useLocation } from 'react-router-dom';
 import AppBarItem from './AppbarItem';
+import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 
 const ResponsiveAppBar = ({ onOpenSidebar }) => {
   const { pathname } = useLocation();
@@ -24,7 +25,7 @@ const ResponsiveAppBar = ({ onOpenSidebar }) => {
     <AppBar position="fixed">
       <Container maxWidth="false">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <SmartToyOutlinedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -40,7 +41,7 @@ const ResponsiveAppBar = ({ onOpenSidebar }) => {
               userSelect: 'none',
             }}
           >
-            Lapteller
+            JobAsk
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -54,7 +55,7 @@ const ResponsiveAppBar = ({ onOpenSidebar }) => {
               <MenuIcon />
             </IconButton>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <SmartToyOutlinedIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -71,7 +72,7 @@ const ResponsiveAppBar = ({ onOpenSidebar }) => {
               userSelect: 'none',
             }}
           >
-            Lapteller
+            JobAsk
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {navConfig.map((item) => (

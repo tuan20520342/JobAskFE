@@ -74,7 +74,7 @@ const StorePage = () => {
       }}
     >
       <Helmet>
-        <title>{`${!state?.storeName ? '404' : `${state?.storeName}`} | Lapteller`}</title>
+        <title>{`${!state?.storeName ? '404' : `${state?.storeName}`} | JobAsk`}</title>
       </Helmet>
       {!state?.storeName ? (
         <NotFoundImg />

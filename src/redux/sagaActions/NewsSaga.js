@@ -6,10 +6,10 @@ import { NewsService } from '~/services/api/NewAPI';
 function* actGetNews(action) {
   const { keyword, callback, fail } = action;
   try {
-    const res = yield call(() => NewsService.getNews(keyword ?? 'laptop'));
+    const res = yield call(() => NewsService.getNews(keyword ?? 'Information Technology Jobs'));
     const { status, data } = res;
     if (status === 200) {
-      const slicedData = data.articles.slice(0, 30);
+      const slicedData = data.slice(0, 30);
       yield put(newsActions.getNewsSuccess({ listNews: slicedData }));
     } else {
       fail();

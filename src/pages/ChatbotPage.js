@@ -74,7 +74,7 @@ const ChatBotPage = () => {
       }}
     >
       <Helmet>
-        <title>Chatbot | Lapteller</title>
+        <title>Chatbot | JobAsk</title>
       </Helmet>
       <Paper
         sx={{

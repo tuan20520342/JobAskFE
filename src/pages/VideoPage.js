@@ -67,7 +67,7 @@ const VideoPage = () => {
       }}
     >
       <Helmet>
-        <title>Video | Lapteller</title>
+        <title>Video | JobAsk</title>
       </Helmet>
       <Paper
         sx={{
