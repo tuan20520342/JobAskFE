@@ -55,7 +55,13 @@ const JobDetailCard = ({ job }) => {
         <CardActions sx={{ marginTop: 'auto' }}>
           <Grid container spacing={1}>
             <Grid item xs={12}>
-              <Button variant="outlined" sx={{ width: '100%' }} component="a" href={job.jobUrl} target="_blank">
+              <Button
+                variant="outlined"
+                sx={{ width: '100%' }}
+                component="a"
+                href={job.jobUrl.replace('vn.', '')}
+                target="_blank"
+              >
                 Job description
               </Button>
             </Grid>
