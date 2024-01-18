@@ -5,12 +5,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import * as SagaActionTypes from '~/redux/constants';
 import L from 'leaflet';
-import CustomMarker from '~/components/Store/CustomMarker';
+import CustomMarker from '~/components/Company/CustomMarker';
 import BoyIcon from '@mui/icons-material/Boy';
 import { Helmet } from 'react-helmet';
 import NotFoundImg from '~/components/UI/NotFound';
 
-const StorePage = () => {
+const CompanyPage = () => {
   const dispatch = useDispatch();
   const { state } = useLocation();
   const [loading, setLoading] = useState(true);
@@ -24,7 +24,7 @@ const StorePage = () => {
     state &&
       dispatch({
         type: SagaActionTypes.GET_LOCALSTORES_SAGA,
-        storeName: state.storeName,
+        storeName: state.company,
         callback: () => setLoading(false),
         fail: () => setError(true),
       });
@@ -74,9 +74,9 @@ const StorePage = () => {
       }}
     >
       <Helmet>
-        <title>{`${!state?.storeName ? '404' : `${state?.storeName}`} | JobAsk`}</title>
+        <title>{`${!state?.company ? '404' : `${state?.company}`} | JobAsk`}</title>
       </Helmet>
-      {!state?.storeName ? (
+      {!state?.company ? (
         <NotFoundImg />
       ) : error ? (
         <NotFoundImg isWrong={true} />
@@ -98,4 +98,4 @@ const StorePage = () => {
     </div>
   );
 };
-export default StorePage;
+export default CompanyPage;

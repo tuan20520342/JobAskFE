@@ -1,11 +1,12 @@
 import React from 'react';
-import { Avatar, Paper, Stack } from '@mui/material';
+import { Avatar, Paper, Stack, Typography } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
 import MarkdownView from 'react-showdown';
-import ProductCard from '~/components/Products/ProductCard';
+import JobCard from '~/components/Jobs/JobCard';
 import ChatLoader from '~/components/UI/ChatLoader';
+import RelativeContent from '~/components/Jobs/RelativeContent';
 
-const Chat = ({ isAnswer, content, onClick, loading }) => {
+const Chat = ({ isAnswer, content, onClick, loading, onRelativeClick }) => {
   return (
     <Paper
       sx={{
@@ -40,13 +41,23 @@ const Chat = ({ isAnswer, content, onClick, loading }) => {
             options={{ tables: true, emoji: true }}
           />
         )}
-        {content?.products && content?.products?.length !== 0 && isAnswer && !loading && (
+        {content?.jobs && content?.jobs?.length !== 0 && isAnswer && !loading && (
           <Stack spacing={{ xs: 1 }} direction="row" useFlexGap flexWrap="wrap">
-            {content?.products?.map((item, index) => (
-              <ProductCard key={index} product={item} onClick={onClick}></ProductCard>
+            <Typography sx={{ display: 'block', width: '100%' }}>Jobs:</Typography>
+            {content?.jobs?.map((item, index) => (
+              <JobCard key={index} job={item} onClick={onClick}></JobCard>
             ))}
           </Stack>
         )}
+        {content?.related_topics && content?.related_topics?.length !== 0 && isAnswer && !loading && (
+          <Stack spacing={{ xs: 1 }} direction="row" useFlexGap flexWrap="wrap">
+            <Typography sx={{ display: 'block', width: '100%' }}>Relative topics:</Typography>
+            {content?.related_topics?.map((item, index) => (
+              <RelativeContent key={index} topic={item} onClick={onRelativeClick}></RelativeContent>
+            ))}
+          </Stack>
+        )}
+
         {content?.imageUrl && !isAnswer && (
           <img
             src={content?.imageUrl}

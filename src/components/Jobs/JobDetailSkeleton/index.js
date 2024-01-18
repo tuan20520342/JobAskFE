@@ -1,7 +1,7 @@
 import React from 'react';
 import { CardContent, Paper, Divider, CardActions, Grid, Skeleton } from '@mui/material';
 
-const ProductDetailSkeleton = () => {
+const JobDetailSkeleton = () => {
   return (
     <Paper sx={{ bgcolor: 'white', flex: '1', margin: '0 10px' }} elevation={2}>
       <CardContent>
@@ -12,7 +12,6 @@ const ProductDetailSkeleton = () => {
           sx={{ margin: 'auto', marginBottom: '10px', fontSize: '1rem' }}
         />
         <Divider variant="middle" sx={{ marginBottom: '8px' }} />
-        <Skeleton variant="text" animation="wave" />
         <Skeleton variant="text" animation="wave" />
         <Skeleton variant="text" animation="wave" />
         <Skeleton variant="text" animation="wave" />
@@ -31,4 +30,4 @@ const ProductDetailSkeleton = () => {
   );
 };
 
-export default ProductDetailSkeleton;
+export default JobDetailSkeleton;

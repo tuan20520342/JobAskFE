@@ -11,8 +11,8 @@ export const URL_GET_VIDEO = (keyword) =>
 //NEWS
 export const URL_GET_NEWS = (keyword) => `${DOMAIN_NAME}/news?q=${keyword}`;
 
-//PRODUCT
-export const URL_GET_PRODUCTS = `${DOMAIN_NAME}/getProductList`;
+//JOB
+export const URL_GET_JOBS = `${DOMAIN_NAME}/findJobs`;
 
 //SHOP
-export const URL_GET_LOCALSTORES = `${DOMAIN_NAME}/getLocalStoreLocations`;
+export const URL_GET_LOCALSTORES = `${DOMAIN_NAME}/findCompanyLocations`;

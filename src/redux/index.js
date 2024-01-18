@@ -5,7 +5,7 @@ import chatbotSlice from './reducer/ChatbotReducer';
 import videoSlice from './reducer/VideoReducer';
 import modalSlice from './reducer/ModalReducer';
 import newsSlice from './reducer/NewsReducer';
-import productSlice from './reducer/ProductReducer';
+import jobSlice from './reducer/JobReducer';
 import storeSlice from './reducer/StoreReducer';
 
 const sagaMiddleware = createSagaMiddleware();
@@ -15,7 +15,7 @@ const rootReducer = {
   videoSlice,
   modalSlice,
   newsSlice,
-  productSlice,
+  jobSlice,
   storeSlice,
 };
 

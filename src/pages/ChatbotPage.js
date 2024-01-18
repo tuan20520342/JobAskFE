@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { modalActions } from '~/redux/reducer/ModalReducer';
 import * as SagaActionTypes from '~/redux/constants';
 import ModalCustom from '~/HOC/ModalCustom';
-import ProductModel from '~/components/Products/ProductModel';
+import JobModel from '~/components/Jobs/JobModel';
 import { Helmet } from 'react-helmet';
 
 const ChatBotPage = () => {
@@ -58,12 +58,23 @@ const ChatBotPage = () => {
     }
   };
 
-  const onClickProduct = (product) => {
+  const onClickProduct = (job) => {
     dispatch(
       modalActions.showModal({
-        ComponentContent: <ProductModel product={product} />,
+        ComponentContent: <JobModel job={job} />,
       }),
     );
+  };
+
+  const onRelativeClick = (topic) => {
+    if (topic.trim() !== '') {
+      dispatch({
+        type: SagaActionTypes.SEND_MESSAGE_SAGA,
+        message: topic,
+        onLoading: () => setLoading(true),
+        onFinish: () => setLoading(false),
+      });
+    }
   };
 
   return (
@@ -99,7 +110,13 @@ const ChatBotPage = () => {
         }}
       >
         {listChat.map((item, index) => (
-          <Chat key={index} content={item.content} isAnswer={item.isAnswer} onClick={onClickProduct}></Chat>
+          <Chat
+            key={index}
+            content={item.content}
+            isAnswer={item.isAnswer}
+            onClick={onClickProduct}
+            onRelativeClick={onRelativeClick}
+          ></Chat>
         ))}
         {loading && <Chat loading={true} isAnswer={true}></Chat>}
       </Paper>
