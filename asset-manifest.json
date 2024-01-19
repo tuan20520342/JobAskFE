@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/JobAskFE/static/css/main.61cde008.css",
-    "main.js": "/JobAskFE/static/js/main.d8051715.js",
+    "main.js": "/JobAskFE/static/js/main.c6cc0efb.js",
     "static/js/787.d52254ad.chunk.js": "/JobAskFE/static/js/787.d52254ad.chunk.js",
     "static/media/404-not-found.png": "/JobAskFE/static/media/404-not-found.19a01faaddcba524a829.png",
     "static/media/oops.png": "/JobAskFE/static/media/oops.bff8017f7a0118a630ca.png",
@@ -12,11 +12,11 @@
     "static/media/revicons.woff": "/JobAskFE/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/JobAskFE/index.html",
     "main.61cde008.css.map": "/JobAskFE/static/css/main.61cde008.css.map",
-    "main.d8051715.js.map": "/JobAskFE/static/js/main.d8051715.js.map",
+    "main.c6cc0efb.js.map": "/JobAskFE/static/js/main.c6cc0efb.js.map",
     "787.d52254ad.chunk.js.map": "/JobAskFE/static/js/787.d52254ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.61cde008.css",
-    "static/js/main.d8051715.js"
+    "static/js/main.c6cc0efb.js"
   ]
 }
