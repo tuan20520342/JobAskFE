@@ -20,7 +20,7 @@ const JobDetailCard = ({ job }) => {
   const navigate = useNavigate();
 
   const handleGoToCompany = () => {
-    navigate('/company', { state: { company: job?.company } });
+    navigate('/JobAskFE/company', { state: { company: job?.company } });
   };
 
   function formatDate(inputDateString) {
