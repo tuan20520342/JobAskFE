@@ -5,19 +5,19 @@ import CompanyPage from '~/pages/CompanyPage';
 
 const CommonRoutes = [
   {
-    path: '/news',
-    element: <NewsPage />,
-  },
-  {
-    path: '/videos',
-    element: <VideoPage />,
-  },
-  {
     path: '',
     element: <ChatBotPage />,
   },
   {
-    path: '/company',
+    path: 'news',
+    element: <NewsPage />,
+  },
+  {
+    path: 'videos',
+    element: <VideoPage />,
+  },
+  {
+    path: 'company',
     element: <CompanyPage />,
   },
 ];
