@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/jobaskfe/static/css/main.859869bf.css",
-    "main.js": "/jobaskfe/static/js/main.26a24cc1.js",
-    "static/js/787.d52254ad.chunk.js": "/jobaskfe/static/js/787.d52254ad.chunk.js",
-    "static/media/404-not-found.png": "/jobaskfe/static/media/404-not-found.19a01faaddcba524a829.png",
-    "static/media/oops.png": "/jobaskfe/static/media/oops.bff8017f7a0118a630ca.png",
-    "static/media/marker_map.png": "/jobaskfe/static/media/marker_map.1dd8fc0cff86f7c41313.png",
-    "static/media/no-image.png": "/jobaskfe/static/media/no-image.0b491be1968160212a92.png",
-    "static/media/revicons.eot": "/jobaskfe/static/media/revicons.a77de540a38981833f9e.eot",
-    "static/media/revicons.ttf": "/jobaskfe/static/media/revicons.57fd05d4ae650374c8de.ttf",
-    "static/media/revicons.woff": "/jobaskfe/static/media/revicons.e8746a624ed098489406.woff",
-    "index.html": "/jobaskfe/index.html",
-    "main.859869bf.css.map": "/jobaskfe/static/css/main.859869bf.css.map",
-    "main.26a24cc1.js.map": "/jobaskfe/static/js/main.26a24cc1.js.map",
-    "787.d52254ad.chunk.js.map": "/jobaskfe/static/js/787.d52254ad.chunk.js.map"
+    "main.css": "/JobAskFe/static/css/main.f3960d40.css",
+    "main.js": "/JobAskFe/static/js/main.c466b1ec.js",
+    "static/js/787.d52254ad.chunk.js": "/JobAskFe/static/js/787.d52254ad.chunk.js",
+    "static/media/404-not-found.png": "/JobAskFe/static/media/404-not-found.19a01faaddcba524a829.png",
+    "static/media/oops.png": "/JobAskFe/static/media/oops.bff8017f7a0118a630ca.png",
+    "static/media/marker_map.png": "/JobAskFe/static/media/marker_map.1dd8fc0cff86f7c41313.png",
+    "static/media/no-image.png": "/JobAskFe/static/media/no-image.0b491be1968160212a92.png",
+    "static/media/revicons.eot": "/JobAskFe/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/JobAskFe/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/JobAskFe/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/JobAskFe/index.html",
+    "main.f3960d40.css.map": "/JobAskFe/static/css/main.f3960d40.css.map",
+    "main.c466b1ec.js.map": "/JobAskFe/static/js/main.c466b1ec.js.map",
+    "787.d52254ad.chunk.js.map": "/JobAskFe/static/js/787.d52254ad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.859869bf.css",
-    "static/js/main.26a24cc1.js"
+    "static/css/main.f3960d40.css",
+    "static/js/main.c466b1ec.js"
   ]
 }
