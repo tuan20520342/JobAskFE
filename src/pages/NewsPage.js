@@ -25,6 +25,7 @@ const NewsPage = () => {
       style={{
         height: '100%',
         width: '100%',
+        padding: 24,
       }}
     >
       <Helmet>
@@ -39,7 +40,7 @@ const NewsPage = () => {
             alignItems: 'center',
             justifyContent: loading ? 'center' : 'start',
             flexDirection: 'column',
-            gap: '10px',
+            gap: '16px',
             height: '100%',
             width: '100%',
             maxWidth: '1000px',

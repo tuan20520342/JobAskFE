@@ -62,8 +62,12 @@ const VideoPage = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        height: '100%',
+        height: '100vh',
         width: '100%',
+        position: 'relative',
+        overflow: 'hidden',
+        paddingTop: 24,
+        gap: 16,
       }}
     >
       <Helmet>
@@ -73,16 +77,12 @@ const VideoPage = () => {
         sx={{
           width: '100%',
           display: 'flex',
-          position: 'fixed',
-          padding: 2,
-          left: 0,
-          top: { xs: 55, sm: 63, md: 67 },
           justifyContent: 'center',
           zIndex: 1000,
+          top: 24,
         }}
-        elevation={2}
       >
-        <Box sx={{ width: '90%', maxWidth: 1000, minWidth: 200, position: 'relative' }}>
+        <Box sx={{ width: '100%', position: 'relative' }}>
           <TextField
             inputProps={{ style: { fontWeight: 500 } }}
             variant="outlined"
@@ -110,13 +110,13 @@ const VideoPage = () => {
       ) : (
         <div
           style={{
+            height: 'calc(100vh-100px)',
+            width: '100%',
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            maxWidth: 1700,
-            width: '100%',
-            gridColumnGap: 10,
+            gridColumnGap: 16,
             gridRowGap: 20,
-            marginTop: 100,
+            overflow: 'scroll',
           }}
         >
           {loading

@@ -82,31 +82,32 @@ const ChatBotPage = () => {
       style={{
         height: '100%',
         width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        padding: 24,
       }}
     >
       <Helmet>
         <title>Chatbot | JobAsk</title>
       </Helmet>
-      <Paper
+      <Box
         sx={{
           display: 'flex',
           alignItems: 'center',
           flexDirection: 'column',
           gap: '10px',
-          height: '100%',
+          flexGrow: 1,
+          flexShrink: 0,
           width: '100%',
-          maxWidth: '1020px',
-          minWidth: '200px',
-          marginBottom: !imageSearch ? '120px' : '190px',
           backgroundColor: 'white',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          padding: '10px',
           backgroundImage:
-            'linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(https://i.imgur.com/2JK3Ex8.png)',
-          backgroundSize: '40%',
+            listChat.length > 0
+              ? ''
+              : 'linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Line-style-icons-chat.svg/2560px-Line-style-icons-chat.svg.png)',
+          backgroundSize: '20%',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
+          padding: 0,
         }}
       >
         {listChat.map((item, index) => (
@@ -119,65 +120,51 @@ const ChatBotPage = () => {
           ></Chat>
         ))}
         {loading && <Chat loading={true} isAnswer={true}></Chat>}
-      </Paper>
+      </Box>
 
-      <Paper
-        elevation={4}
-        sx={{
-          width: '100%',
-          display: 'flex',
-          gap: 1,
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          padding: '8px 8px 16px 8px',
-          justifyContent: 'center',
-        }}
-      >
-        <Box sx={{ width: '90%', maxWidth: 1000, minWidth: 200, position: 'relative' }}>
-          <FormControlLabel
-            value="top"
-            control={<Switch color="primary" checked={imageSearch} onChange={toggleimageSearch} />}
-            label="Image Search"
-          />
-          {imageSearch && (
-            <TextField
-              sx={{ marginBottom: 1 }}
-              inputProps={{ style: { fontWeight: 500 }, autoComplete: 'off' }}
-              variant="outlined"
-              placeholder="URL image"
-              fullWidth
-              color="secondary"
-              value={urlImage}
-              onChange={(e) => setUrlImage(e.target.value)}
-              onKeyDown={(key) => {
-                handleEnterMesage(key);
-              }}
-            />
-          )}
+      <Box sx={{ width: '100%', position: 'relative' }}>
+        <FormControlLabel
+          value="top"
+          control={<Switch color="primary" checked={imageSearch} onChange={toggleimageSearch} />}
+          label="Image Search"
+        />
+        {imageSearch && (
           <TextField
+            sx={{ marginBottom: 1 }}
             inputProps={{ style: { fontWeight: 500 }, autoComplete: 'off' }}
             variant="outlined"
-            placeholder="Send a message"
+            placeholder="URL image"
             fullWidth
             color="secondary"
-            value={newMessage}
-            onChange={(e) => setNewMessage(e.target.value)}
+            value={urlImage}
+            onChange={(e) => setUrlImage(e.target.value)}
             onKeyDown={(key) => {
               handleEnterMesage(key);
             }}
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton aria-label="send button" disabled={loading} onClick={handleSendMessage} edge="end">
-                    <SendIcon />
-                  </IconButton>
-                </InputAdornment>
-              ),
-            }}
           />
-        </Box>
-      </Paper>
+        )}
+        <TextField
+          inputProps={{ style: { fontWeight: 500 }, autoComplete: 'off' }}
+          variant="outlined"
+          placeholder="Send a message"
+          fullWidth
+          color="secondary"
+          value={newMessage}
+          onChange={(e) => setNewMessage(e.target.value)}
+          onKeyDown={(key) => {
+            handleEnterMesage(key);
+          }}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton aria-label="send button" disabled={loading} onClick={handleSendMessage} edge="end">
+                  <SendIcon />
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+        />
+      </Box>
       <ModalCustom closeButton={true} custom={{ maxWidth: '1500px', minWidth: '200px' }} />
     </div>
   );

@@ -4,8 +4,8 @@ export default function Backdrop(theme) {
       styleOverrides: {
         root: {
           background: `rgba(22,28,36,0.2)`,
-          '&.MuiBackdrop-invisible': {
-            background: 'transparent',
+          "&.MuiBackdrop-invisible": {
+            background: "transparent",
           },
         },
       },

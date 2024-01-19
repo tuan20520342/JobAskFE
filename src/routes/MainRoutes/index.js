@@ -4,7 +4,7 @@ import PageNotFound from '~/pages/PageNotFound';
 
 const MainRoutes = () => {
   return {
-    path: '/JobAskFE/',
+    path: '/',
     element: <MainLayout />,
     children: [
       ...CommonRoutes.map((route) => ({

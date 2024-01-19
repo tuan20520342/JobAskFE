@@ -1,32 +1,32 @@
-import React from 'react';
 import { Avatar, Paper, Stack, Typography } from '@mui/material';
-import { deepOrange } from '@mui/material/colors';
 import MarkdownView from 'react-showdown';
+import logo from '~/assets/robot.png';
 import JobCard from '~/components/Jobs/JobCard';
-import ChatLoader from '~/components/UI/ChatLoader';
 import RelativeContent from '~/components/Jobs/RelativeContent';
+import ChatLoader from '~/components/UI/ChatLoader';
 
 const Chat = ({ isAnswer, content, onClick, loading, onRelativeClick }) => {
   return (
     <Paper
       sx={{
         width: '100%',
-        maxWidth: 1000,
-        minWidth: 200,
         bgcolor: 'transparent',
         display: 'flex',
         gap: 1,
         justifyContent: isAnswer ? 'flex-start' : 'flex-end',
       }}
     >
-      {isAnswer && <Avatar sx={{ bgcolor: deepOrange[500], display: { xs: 'none', md: 'flex' } }}>B</Avatar>}
+      {isAnswer && <Avatar sx={{ display: { xs: 'none', md: 'flex' } }} src={logo}></Avatar>}
       <Paper
         sx={{
           width: 'content-fit',
           marginLeft: !isAnswer && '10%',
           marginRight: isAnswer && '10%',
-          bgcolor: isAnswer ? 'primary.lighter' : 'secondary.lighter',
-          p: 1.2,
+          bgcolor: isAnswer ? '#f1f3f5' : '#fff',
+          borderWidth: 1,
+          borderStyle: 'solid',
+          borderColor: isAnswer ? '#e9ecef' : '#ccc',
+          p: 2,
           display: 'flex',
           flexDirection: 'column',
           gap: 1,

@@ -12,7 +12,7 @@ const JobCard = ({ job, onClick }) => {
             <Typography
               gutterBottom
               variant="body1"
-              color="secondary.main"
+              color="primary.main"
               sx={{
                 fontWeight: 600,
                 ...ellipsisStyle,

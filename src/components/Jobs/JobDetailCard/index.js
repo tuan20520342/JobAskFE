@@ -20,7 +20,7 @@ const JobDetailCard = ({ job }) => {
   const navigate = useNavigate();
 
   const handleGoToCompany = () => {
-    navigate('/JobAskFE/company', { state: { company: job?.company } });
+    navigate('/company', { state: { company: job?.company } });
   };
 
   function formatDate(inputDateString) {
@@ -37,7 +37,7 @@ const JobDetailCard = ({ job }) => {
           <Typography
             gutterBottom
             variant="body1"
-            color="secondary.main"
+            color="primary.main"
             sx={{
               fontWeight: 600,
               textAlign: 'center',
