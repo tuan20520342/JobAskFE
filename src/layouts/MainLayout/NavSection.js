@@ -132,8 +132,8 @@ const NavSection = ({ navConfig, ...other }) => {
   const { pathname } = useLocation();
 
   const match = (path) => {
-    const pathFirstPart = path.split('/')[1];
-    const pathnameFirstPart = pathname.split('/')[1];
+    const pathFirstPart = path.split('/')[2];
+    const pathnameFirstPart = pathname.split('/')[2];
     return pathFirstPart === pathnameFirstPart;
   };
 

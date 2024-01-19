@@ -41,7 +41,7 @@ const Sidebar = ({ isOpenSidebar, onCloseSidebar }) => {
       }}
     >
       <Link
-        to="/"
+        to="/JobAskFe/"
         style={{
           display: 'flex',
           justifyContent: 'start',
