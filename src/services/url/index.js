@@ -1,4 +1,4 @@
-export const DOMAIN_NAME = 'http://localhost:5000';
+export const DOMAIN_NAME = process.env.REACT_APP_PROD_BE_URL;
 
 //CHATBOT
 export const URL_CHATBOT = `${DOMAIN_NAME}/ask`;
