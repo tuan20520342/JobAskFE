@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/JobAskFE/static/css/main.61cde008.css",
-    "main.js": "/JobAskFE/static/js/main.54a79dfd.js",
+    "main.css": "/JobAskFE/static/css/main.d776094d.css",
+    "main.js": "/JobAskFE/static/js/main.3cbcb710.js",
     "static/js/787.d52254ad.chunk.js": "/JobAskFE/static/js/787.d52254ad.chunk.js",
     "static/media/404-not-found.png": "/JobAskFE/static/media/404-not-found.19a01faaddcba524a829.png",
+    "static/media/robot.png": "/JobAskFE/static/media/robot.c898d424d8c7955690b1.png",
     "static/media/oops.png": "/JobAskFE/static/media/oops.bff8017f7a0118a630ca.png",
     "static/media/marker_map.png": "/JobAskFE/static/media/marker_map.1dd8fc0cff86f7c41313.png",
     "static/media/no-image.png": "/JobAskFE/static/media/no-image.0b491be1968160212a92.png",
@@ -11,12 +12,12 @@
     "static/media/revicons.ttf": "/JobAskFE/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/JobAskFE/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/JobAskFE/index.html",
-    "main.61cde008.css.map": "/JobAskFE/static/css/main.61cde008.css.map",
-    "main.54a79dfd.js.map": "/JobAskFE/static/js/main.54a79dfd.js.map",
+    "main.d776094d.css.map": "/JobAskFE/static/css/main.d776094d.css.map",
+    "main.3cbcb710.js.map": "/JobAskFE/static/js/main.3cbcb710.js.map",
     "787.d52254ad.chunk.js.map": "/JobAskFE/static/js/787.d52254ad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.61cde008.css",
-    "static/js/main.54a79dfd.js"
+    "static/css/main.d776094d.css",
+    "static/js/main.3cbcb710.js"
   ]
 }
