@@ -1,7 +1,6 @@
 import NewsPage from '~/pages/NewsPage';
 import VideoPage from '~/pages/VideoPage';
 import ChatBotPage from '~/pages/ChatbotPage';
-import PageNotFound from '~/pages/PageNotFound';
 import CompanyPage from '~/pages/CompanyPage';
 
 const CommonRoutes = [
@@ -14,16 +13,12 @@ const CommonRoutes = [
     element: <VideoPage />,
   },
   {
-    path: '/',
+    path: '',
     element: <ChatBotPage />,
   },
   {
     path: '/company',
     element: <CompanyPage />,
-  },
-  {
-    path: '*',
-    element: <PageNotFound />,
   },
 ];
 

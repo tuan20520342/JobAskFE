@@ -6,7 +6,6 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import AdbIcon from '@mui/icons-material/Adb';
 import navConfig from '../NavConfig';
 import { useLocation } from 'react-router-dom';
 import AppBarItem from './AppbarItem';
@@ -16,8 +15,8 @@ const ResponsiveAppBar = ({ onOpenSidebar }) => {
   const { pathname } = useLocation();
 
   const match = (path) => {
-    const pathFirstPart = path.split('/')[1];
-    const pathnameFirstPart = pathname.split('/')[1];
+    const pathFirstPart = path.split('/')[2];
+    const pathnameFirstPart = pathname.split('/')[2];
     return pathFirstPart === pathnameFirstPart;
   };
 
