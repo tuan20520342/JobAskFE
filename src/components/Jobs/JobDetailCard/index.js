@@ -65,7 +65,7 @@ const JobDetailCard = ({ job }) => {
                 Job description
               </Button>
             </Grid>
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <Button
                 variant="contained"
                 sx={{ width: '100%' }}
@@ -74,7 +74,7 @@ const JobDetailCard = ({ job }) => {
               >
                 Company Location
               </Button>
-            </Grid>
+            </Grid> */}
           </Grid>
         </CardActions>
       </CardContent>

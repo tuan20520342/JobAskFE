@@ -58,9 +58,9 @@ const Chat = ({ isAnswer, content, onClick, loading, onRelativeClick }) => {
           </Stack>
         )}
 
-        {content?.imageUrl && !isAnswer && (
+        {content?.base64 && !isAnswer && (
           <img
-            src={content?.imageUrl}
+            src={content?.base64}
             alt=""
             style={{
               width: '120px',

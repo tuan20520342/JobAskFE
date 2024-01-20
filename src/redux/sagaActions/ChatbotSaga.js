@@ -41,21 +41,21 @@ function* actSendMessage(action) {
 }
 
 function* actSendImgQuestion(action) {
-  const { message, imageUrl, onLoading, onFinish } = action;
+  const { message, image, onLoading, onFinish } = action;
   let responseMessage;
   try {
     const newMessage = {
       isAnswer: false,
       content: {
         message: message,
-        imageUrl: imageUrl,
+        base64: image,
       },
     };
     yield put(chatbotActions.sendMessage({ data: newMessage }));
     onLoading();
-    const res = yield call(() => ChatbotService.postImgMessage(message, imageUrl));
+    const res = yield call(() => ChatbotService.postImgMessage(message, image));
     const { status, data } = res;
-    console.log(res);
+
     if (status === 200) {
       responseMessage = {
         isAnswer: true,

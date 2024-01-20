@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 // import Navbar from './Navbar';
 import Sidebar from './Sidebar';
+import Navbar from './Navbar';
 
 const APP_BAR_MOBILE = 64;
 
@@ -22,6 +23,7 @@ const MainStyle = styled('div')(({ theme }) => ({
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
   },
+  backgroundColor: 'white',
 }));
 
 const DashboardLayout = () => {
@@ -29,7 +31,7 @@ const DashboardLayout = () => {
 
   return (
     <RootStyle>
-      {/* <Navbar onOpenSidebar={() => setOpen(true)} /> */}
+      <Navbar onOpenSidebar={() => setOpen(true)} />
       <Sidebar isOpenSidebar={open} onCloseSidebar={() => setOpen(false)} />
       <MainStyle>
         <Outlet />
